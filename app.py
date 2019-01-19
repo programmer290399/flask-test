@@ -38,7 +38,7 @@ class Movies_List(Resource):
         if item:
             item.collection = args['collection']
             item.save_to()
-            return {'Movie': item.json()}
+            return {'test': item.json()}
         item = Movies(movie, args['director'], args['genre'], args['collection'])
         item.save_to()
         return item.json()
